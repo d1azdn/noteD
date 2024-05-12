@@ -7,7 +7,7 @@
 noteD is a simple website that uses simple sessionStorage to store data, DOM and JS to make things works. And also using tailwindcss as css-framework. This project can be intended as learning material to learn things like clientStorage and DOM usage.
 
 ## Overview
-Check this website : d1azdn.github.io/noteD
+Check this website : https://d1azdn.github.io/noteD
 
 ## Getting Started
 1. Clone this website at your directory.
