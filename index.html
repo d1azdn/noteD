@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noteD - Simple note apps.</title>
+    <link rel="icon" href="/assets/logo_white.png">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="font-body">
+    <div class="hidden fixed z-10 w-full h-full" id="remove-edit" onclick="removeedit()">
+    </div>
+    <main class="flex-col md:flex-row flex">
+        <div class="mobile" id="mobile">
+        </div>
+        <div class="navbar bg-purple-900 text-white h-16 md:h-screen flex flex-row md:flex-col items-center content-center text-center">
+            <img src="/assets/logo_white.png" class="w-12 md:w-24 mt-4 mb-7 hover:cursor-pointer" onclick="window.location.reload()" style="filter: drop-shadow(0 0 0.7rem white);" alt="">
+            <p class="hover:bg-purple-700 hover:cursor-pointer active:bg-purple-500 transition-all duration-100 px-2 md:px-9 py-3 w-full" onclick="aboutbtn()">Dashboard</p>
+            <p class="hover:bg-purple-700 hover:cursor-pointer active:bg-purple-500 transition-all duration-100 px-2 md:px-9 py-3 w-full" onclick="aboutbtn('about')">About</p>
+            <p class="hover:bg-purple-700 hover:cursor-pointer active:bg-purple-500 transition-all duration-100 px-2 md:px-9 py-3 w-full" onclick="aboutbtn('social')">Social</p>
+        </div>
+        <div class="content px-5">
+            <div class="hidden" id="description">
+                <h1 class="text-xl md:text-3xl mt-10 mb-5">What is noteD</h1>
+                <p>noteD is a mini-project that uses tailwindcss and DOM as the base website, so that when you refresh your browser, the lists still there as before!</p>
+                <p>Unless you closes the pages. it will *poof* immediately.</p>
+                <div class="mascots flex flex-col justify-center text-center items-center content-center mt-48">
+                    <img src="/assets/Logo-black.png" class="w-52" alt="">
+                    <p>Say hi to this mascots, his name is AdoubleZ !</p>
+                </div>
+            </div>
+            <div class="hidden" id="socials">
+                <p class="mt-10">You can find my social using button below.</p>
+                <div class="socs griod md:flex">
+                    <a href="https://github.com/d1azdn" target="_blank"><p class="bg-gray-100 hover:border-2 hover:scale-110 rounded-full px-5 py-2 mt-5 mx-2">Github</p></a>
+                    <a href="https://www.linkedin.com/in/diaz-saputra-1b6934288/" target="_blank"><p class="bg-gray-100 hover:border-2 hover:scale-110 rounded-full px-5 py-2 mt-5 mx-2">Linkedin</p></a>
+                    <a href="https://instagram.com/d1azdn" target="_blank"><p class="bg-gray-100 hover:border-2 hover:scale-110 rounded-full px-5 py-2 mt-5 mx-2 ">Instagram</p></a>
+                </div>
+            </div>
+            <div class="main-note" id="main-note">
+                <div class="edit-list hidden bg-white shadow-md fixed flex-col justify-center content-center z-20" style="width: 140px;" id="edit-list">
+                    <button class="bg-red-500 hover:bg-red-300 px-5 py-1 mx-4 my-3 text-white font-semibold rounded-full" onclick="deletelist()">Delete</button>
+                </div>
+                <div class="flex flex-col mt-10" id="write">
+                    <h1 class="text-xl md:text-3xl">Write your notes here : </h1>
+                    <form action="javascript:;" onsubmit="addlist()">
+                        <input class="bg-gray-100 w-full md:w-3/4 rounded-full px-5 py-2 mt-4 border-2 border-purple-700" type="text" name="text-input" id="text-input" placeholder="Write your text here.">
+                        <input class="ml-3 mt-3 bg-purple-900 rounded-full py-2 px-8 text-xl text-white hover:cursor-pointer" type="submit" name="submit" id="submit" value="Post!">
+                    </form>
+                </div>
+                <h1 class="text-xl md:text-3xl mt-10 mb-5" id="text-list">Here are list's of your note :</h1>
+                <div class="grid-cols-1 md:grid-cols-4 grid" id="list-note">
+                    <div class="card bg-gray-100 rounded-md p-3 border-4 mx-1 mt-2 break-words hover:border-purple-900 hover:cursor-pointer hover:bg-gray-300">Lorem ipsum dolor sit amet. (...)</div>
+                </div>
+            </div>
+        </div>    
+    </main>
+    
+    <footer>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
